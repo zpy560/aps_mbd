@@ -28,7 +28,7 @@ show_animation=true;
 writerObj=VideoWriter('parking_out_Slot_7meters.avi'); %// 定义一个视频文件用来存动画
 open(writerObj); %// 打开该视频文件
 %start simulation
-T=500;
+T=59;
 for t = 1:T
     frenetTrajectories =objFrenetPlanner.CalcFrenetTrajectories(s0,s0_d, d0, d0_d, d0_dd);
     globalTrajectories = objFrenetPlanner.CalcGlobalTrajectories(frenetTrajectories,referencePath);
