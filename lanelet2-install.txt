@@ -1,0 +1,23 @@
+1、下载 Lanelet2源码
+https://github.com/fzi-forschungszentrum-informatik/Lanelet2
+git clone 
+
+2、安装 mrt_cmake_modules
+下载ros2版本，https://github.com/ros2-gbp/mrt_cmake_modules-release/tree/release/humble/mrt_cmake_modules#
+cmake环境，mkdir build && cd build && cmake .. && make && sudo make install 
+
+3、注意arm架构上，如果报错，需要安装
+
+  Could NOT find pugixml (missing: PUGIXML_LIBRARIES PUGIXML_INCLUDE_DIRS)
+sudo apt-get update
+sudo apt-get install libpugixml-dev
+
+  Could NOT find GeographicLib (missing: GeographicLib_LIBRARIES GeographicLib_INCLUDE_DIRS)
+sudo apt-get update
+sudo apt-get install libgeographic-dev
+
+4、ros2 需要安装boost，ubuntu22.04默认版本是1.74.0
+
+
+  
+

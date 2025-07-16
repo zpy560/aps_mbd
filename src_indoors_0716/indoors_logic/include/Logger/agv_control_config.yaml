@@ -1,0 +1,24 @@
+logging:
+  # 全局日志配置
+  logger_name: "task_logger"  # 新增：日志记录器名称
+  global_level: "DEBUG"      # 全局日志级别
+  flush_level: "WARN"        # 触发立即刷新的级别
+
+  # 控制台日志配置
+  console:
+    enabled: false
+    pattern: "%^%H:%M:%S.%e [%s:%#] %v%$"
+    # pattern: "[%H:%M:%S.%e] [%^%l%$] %v"
+    level: "DEBUG"
+
+  # 文件日志配置
+  file:
+    enabled: true
+    absolute_path: "/userdata/logs/agv_task"  # 新增：日志文件绝对路径
+    filename: "control_task.log"
+    pattern: "%Y-%m-%d %H:%M:%S.%e [%P:%t] [%l] [%s:%#] %v"
+    level: "INFO"
+    rotation:
+      type: "size"
+      max_size: "100"
+      max_files: 5

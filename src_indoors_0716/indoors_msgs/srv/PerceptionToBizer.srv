@@ -1,0 +1,3 @@
+geometry_msgs/PoseStamped[3] send_points
+---
+bool flag

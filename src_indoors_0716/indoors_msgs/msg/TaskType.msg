@@ -1,0 +1,9 @@
+uint8 UNKNOWN=0
+uint8 NORMAL=1
+uint8 LIFT=2
+uint8 ROAT=3
+uint8 ENDPATH=4        
+uint8 NORMALROAT=5
+uint8 TASKCANCEL=6
+uint8 OTHER=7
+uint8 task

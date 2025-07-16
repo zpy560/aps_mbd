@@ -1,0 +1,4 @@
+int32 navtype
+int32 runtype
+---
+bool flag

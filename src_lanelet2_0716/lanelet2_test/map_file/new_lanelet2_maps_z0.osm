@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='utf-8'?>
+<osm generator="VMB">
+  <MetaInfo format_version="1" map_version="4" validation_version="1" />
+  <node id="1" lat="22.6881902" lon="114.3480115">
+    <tag k="local_x" v="82.7792" />
+    <tag k="local_y" v="3.1397" />
+    <tag k="ele" v="0" />
+  </node>
+  <node id="2" lat="22.6882902" lon="114.3480115">
+    <tag k="local_x" v="623.9522" />
+    <tag k="local_y" v="-55.865" />
+    <tag k="ele" v="0" />
+  </node>
+  <node id="4" lat="22.6883902" lon="114.3480115">
+    <tag k="local_x" v="82.6419" />
+    <tag k="local_y" v="-0.5888" />
+    <tag k="ele" v="0" />
+  </node>
+  <node id="5" lat="22.6884902" lon="114.3480115">
+    <tag k="local_x" v="82.516" />
+    <tag k="local_y" v="-0.6664" />
+    <tag k="ele" v="0" />
+  </node>
+  <node id="8" lat="22.6885902" lon="114.3480115">
+    <tag k="local_x" v="82.5022" />
+    <tag k="local_y" v="-0.5156" />
+    <tag k="ele" v="0" />
+  </node>
+  <node id="9" lat="22.6886952" lon="114.3480115">
+    <tag k="local_x" v="623.8173" />
+    <tag k="local_y" v="-59.5695" />
+    <tag k="ele" v="0" />
+  </node>
+  <node id="12" lat="22.6886952" lon="114.3480125">
+    <tag k="local_x" v="766.3837" />
+    <tag k="local_y" v="-71.1038" />
+    <tag k="ele" v="0" />
+  </node>
+  <node id="14" lat="22.6887942" lon="114.3480125">
+    <tag k="local_x" v="767.0617" />
+    <tag k="local_y" v="-75.1599" />
+    <tag k="ele" v="0" />
+  </node>
+
+  <!-- 添加一个 polygon（way） -->
+  <way id="10001">
+    <nd ref="8"/>
+    <nd ref="9"/>
+    <nd ref="12"/>
+    <nd ref="14"/>
+    <nd ref="8"/> <!-- 闭合 -->
+    <tag k="type" v="polygon"/>
+    <tag k="subtype" v="custom"/>
+    <tag k="name" v="示例多边形"/>
+  </way>
+
+  <!-- 添加一个 area（relation） -->
+  <relation id="20001">
+    <member type="way" role="outer" ref="10001"/>
+    <tag k="type" v="area"/>
+    <tag k="subtype" v="custom_area"/>
+    <tag k="name" v="示例区域"/>
+  </relation>
+
+  <way id="3">
+    <nd ref="1" />
+    <nd ref="2" />
+    <tag k="type" v="line_thin" />
+    <tag k="subtype" v="solid" />
+  </way>
+  <way id="10">
+    <nd ref="8" />
+    <nd ref="9" />
+    <tag k="type" v="line_thin" />
+    <tag k="subtype" v="dashed" />
+  </way>
+  <relation id="11">
+    <member type="way" role="left" ref="3" />
+    <member type="way" role="right" ref="10" />
+    <tag k="type" v="lanelet" />
+    <tag k="subtype" v="road" />
+    <tag k="speed_limit" v="10" />
+    <tag k="location" v="urban" />
+    <tag k="one_way" v="yes" />
+    <tag k="turn_direction" v="straight" />
+  </relation>
+</osm>

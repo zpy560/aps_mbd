@@ -1,0 +1,5 @@
+PathPoints[] path
+TaskType task 
+uint8 line_flag
+---
+bool flag 
